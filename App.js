@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
 // Single element.
 const heading = React.createElement(
     "h1",
@@ -35,7 +38,7 @@ const complexNestedElement = React.createElement("div", { className: "row" },
                 )
             )
         ),
-        React.createElement("section", { class: "col-6 right-section" },
+        React.createElement("section", { className: "col-6 right-section" },
             React.createElement("h2", {}, "Right Section",
                 React.createElement("ul", {},
                     [
@@ -58,4 +61,4 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(parent); // This code will not apply
 root.render(complexNestedElement); // This code will apply
-console.log(parent);
+console.log(complexNestedElement);
