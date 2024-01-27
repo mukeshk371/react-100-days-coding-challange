@@ -54,9 +54,10 @@ Browserslist is a configuration file that allows us to specify which browsers ou
 `{ "browserslist": [ "last 2 versions", "> 1%", "IE 11" ] }`
 
 ## [Bablel](https://babeljs.io/)
+**Babel** package of parcel is a Javascript compiler which transpiles/compiles our code before reaching to JS
 
 ## [JSX (JavaScript XML)](https://legacy.reactjs.org/docs/introducing-jsx.html)
-JSX is a syntax extension for JavaScript that allows us to write HTML-like code in our JavaScript files, making it easier to express the structure of our React components.
+**JSX** is a syntax extension for JavaScript that allows us to write HTML-like code in our JavaScript files, making it easier to express the structure of our React components.
 
 ### [Functional Component in JSX](https://legacy.reactjs.org/docs/components-and-props.html)
 A functional component is a type of component that is defined as a JavaScript function.
