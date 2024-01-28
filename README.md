@@ -46,8 +46,8 @@ This command installs Parcel and adds it to the `devDependencies` section in our
 ### Run Parcel to bundle and serve our project
 `npm run start` or `npm start`
 
-- **caret ^** : ^version “Compatible with version” will update us to all future minor/patch versions, without incrementing the major version
-- **tilde ~** : ~version “Approximately equivalent to version”, will update us to all future patch versions, without incrementing the minor version.
+- **caret “^”** : ^version “Compatible with version” will update us to all future minor/patch versions, without incrementing the major version
+- **tilde “~”** : ~version “Approximately equivalent to version”, will update us to all future patch versions, without incrementing the minor version.
 
 ### [browserslist](https://browserslist.dev/) in `package.json`
 Browserslist is a configuration file that allows us to specify which browsers our project should support.
@@ -64,3 +64,5 @@ A functional component is a type of component that is defined as a JavaScript fu
 or
 A functional component is a javascript function that returns JSX.
 We can also write any kind of javascript inside jsx HTML.
+
+- We can also write any JavaScript code or a JavaScript function inside JSX by using **“{}”**.
