@@ -48,27 +48,35 @@ ul {
   border-bottom: solid 1px #ccc;
 }
 .res-container {
-    display: flex;
-    flex-flow: wrap;
+  padding: 10px;
+  display: flex;
+  flex-flow: wrap;
 }
 .res-card {
   width: 20%;
+  padding: 10px;
   cursor: pointer;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
-.res-card>h3{
-    margin: 0;
-    padding: 10px;
+.res-card > h3 {
+  margin: 0;
+  padding: 10px;
 }
 
-.res-card>span {
-    display: block;
+.res-card section > span {
+  display: block;
 }
-.res-card>section{
-    padding: 10px;
+.res-card > section {
+  padding: 10px;
+}
+.res-card img {
+  object-fit: cover;
+}
+.res-card-content {
+  padding: 10px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
