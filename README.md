@@ -69,3 +69,11 @@ We can also write any kind of javascript inside jsx HTML.
 
 ## [Props](https://legacy.reactjs.org/docs/components-and-props.html)
 - Passing a props to a component is just like passing a argument to a function.
+
+## Config-driven UI
+**"Config-driven UI"** in React refers to a design approach where the user interface of a React application is primarily defined and controlled by configuration objects rather than hard-coded components. This means that the structure, behavior, and appearance of UI elements are determined by configuration data rather than explicit code.
+
+In a config-driven UI approach:
+- Configuration Data
+- Dynamic Rendering
+- Flexibility and Customization
