@@ -66,3 +66,6 @@ A functional component is a javascript function that returns JSX.
 We can also write any kind of javascript inside jsx HTML.
 
 - We can also write any JavaScript code or a JavaScript function inside JSX by using **“{}”**.
+
+## [Props](https://legacy.reactjs.org/docs/components-and-props.html)
+- Passing a props to a component is just like passing a argument to a function.
