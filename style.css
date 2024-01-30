@@ -51,6 +51,7 @@ ul {
   padding: 10px;
   display: flex;
   flex-flow: wrap;
+  align-items: stretch;
 }
 .res-card {
   width: 20%;
@@ -77,6 +78,7 @@ img {
   object-fit: cover;
 }
 .res-card-content {
+  height: 100%;
   padding: 10px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
