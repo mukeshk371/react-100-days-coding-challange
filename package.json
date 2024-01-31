@@ -5,9 +5,7 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,7 +19,6 @@
   "homepage": "https://github.com/mukeshk371/react-100-days-coding-challange#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.11.0",
-    "gh-pages": "^6.1.1",
     "parcel": "^2.11.0",
     "postcss": "^8.4.33",
     "process": "^0.11.10",
