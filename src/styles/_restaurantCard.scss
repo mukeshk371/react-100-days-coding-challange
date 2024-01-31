@@ -5,6 +5,8 @@
     .res-img {
       height: 182px;
       border-radius: 16px;
+      filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 8px);
+      z-index: 1;
     }
 
     h3,

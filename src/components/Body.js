@@ -11,17 +11,24 @@ export const Body = () => {
           <h1>MUKESH, what's on your mind?</h1>
           <div className="whitespace-nowrap">
             {whatsInYourMind.map((resFilter) => (
-              <a href="#!" id={resFilter.id} className="filter-anchor inline-block">
+              <a
+                href="#!"
+                id={resFilter.id}
+                className="filter-anchor inline-block"
+              >
                 <img src={FILTER_LOGO_URL + resFilter.imageId} />
               </a>
             ))}
           </div>
         </div>
+        <span className="hr" />
+        <h1>Top restaurant chains in Muzaffarpur</h1>
         <div className="res-container grid grid-cols-1 md:grid-cols-4 gap-8">
           {resList.map((restaurant) => (
             <RestaurantCard key={restaurant.info.id} resData={restaurant} />
           ))}
         </div>
+        <span className="hr" />
       </div>
     </div>
   );
