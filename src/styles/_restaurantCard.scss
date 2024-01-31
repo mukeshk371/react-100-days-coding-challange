@@ -1,0 +1,23 @@
+.res-card {
+  .res-card-content {
+    color: rgba(2, 6, 12, 0.6);
+
+    .res-img {
+      height: 182px;
+      border-radius: 16px;
+      filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 8px);
+      z-index: 1;
+    }
+
+    h3,
+    h4 {
+      color: rgba(2, 6, 12, 0.75);
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+  }
+}
