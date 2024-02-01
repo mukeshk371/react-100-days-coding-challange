@@ -1,15 +1,7 @@
 import { CDN_URL } from "../utils/constants";
+import React from "react";
 
-export const RestaurantCard = (props) => {
-  const { resData } = props;
-  const {
-    name,
-    cuisines,
-    avgRating,
-    locality,
-    cloudinaryImageId,
-  } = resData?.info;
-  const {deliveryTime} = resData?.info.sla;
+export const RestaurantCard = ({ restaurant }) => {
   return (
     <div className="res-card">
       <div className="res-card-content h-full">
@@ -17,11 +9,11 @@ export const RestaurantCard = (props) => {
           alt="res-img"
           width="100%"
           height="200px"
-          src={CDN_URL + cloudinaryImageId}
+          src={CDN_URL + restaurant.info.cloudinaryImageId}
           className="object-cover res-img"
         />
         <section>
-          <h3 className="truncate">{name}</h3>
+          <h3 className="truncate">{restaurant.info.name}</h3>
           <h4 className="flex items-center">
             <svg
               width="20"
@@ -30,8 +22,8 @@ export const RestaurantCard = (props) => {
               fill="none"
               role="img"
               aria-hidden="true"
-              strokeColor="rgba(2, 6, 12, 0.92)"
-              fillColor="rgba(2, 6, 12, 0.92)"
+              strokecolor="rgba(2, 6, 12, 0.92)"
+              fillcolor="rgba(2, 6, 12, 0.92)"
             >
               <circle
                 cx="10"
@@ -52,15 +44,15 @@ export const RestaurantCard = (props) => {
                   y2="19"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#21973B"></stop>
-                  <stop offset="1" stop-color="#128540"></stop>
+                  <stop stopColor="#21973B"></stop>
+                  <stop offset="1" stopColor="#128540"></stop>
                 </linearGradient>
               </defs>
             </svg>
-            {avgRating} • {deliveryTime} Minutes
+            {restaurant.info.avgRating} • {restaurant.info.sla.deliveryTime} Minutes
           </h4>
-          <span className="block truncate">{cuisines.join(", ")}</span>
-          <span className="block">{locality}</span>
+          <span className="block truncate">{restaurant.info.cuisines.join(", ")}</span>
+          <span className="block">{restaurant.info.locality}</span>
         </section>
       </div>
     </div>
