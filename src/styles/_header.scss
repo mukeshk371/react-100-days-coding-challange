@@ -4,7 +4,7 @@ header.header {
   z-index: 999;
   box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
 
-  > div {
+  >div {
     @media (min-width: 1200px) {
       width: 1200px;
     }
@@ -20,8 +20,17 @@ header.header {
 
       &:hover {
         color: #fc8019;
+
         path {
           fill: #fc8019;
+        }
+
+        .cart-svg {
+          stroke: #fc8019;
+
+          path {
+            fill: none;
+          }
         }
       }
 
