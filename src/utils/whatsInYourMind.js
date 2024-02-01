@@ -4,7 +4,7 @@ export const whatsInYourMind = [
     imageId: "v1674029856/PC_Creative%20refresh/3D_bau/banners_new/Pizza.png",
     action: {
       link: "https://www.swiggy.com/collections/83644?collection_id=83644&tags=layout_CCS_Pizza&type=rcv2",
-      text: "pizzas",
+      text: "Pizzas",
       type: "WEBLINK",
     },
     entityType: "BANNER",
