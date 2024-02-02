@@ -37,7 +37,7 @@ export const whatsInYourMind = [
     imageId: "v1675667630/PC_Creative%20refresh/Desserts_2.png",
     action: {
       link: "https://www.swiggy.com/collections/83662?collection_id=83662&tags=layout_CCS_Desserts&type=rcv2",
-      text: "Dessert",
+      text: "Desserts",
       type: "WEBLINK",
     },
     entityType: "BANNER",
@@ -63,6 +63,23 @@ export const whatsInYourMind = [
       altTextCta: "open",
     },
     entityId: "swiggy://collectionV2?collection_id=83670&tags=layout_CCS_Rolls",
+    frequencyCapping: {},
+  },
+  {
+    id: "750588",
+    imageId: "v1674029848/PC_Creative%20refresh/3D_bau/banners_new/Chinese.png",
+    action: {
+      link: "https://www.swiggy.com/collections/83647?collection_id=83647&tags=layout_CCS_Chinese&type=rcv2",
+      text: "Chinese",
+      type: "WEBLINK",
+    },
+    entityType: "BANNER",
+    accessibility: {
+      altText: "restaurant curated for chinese",
+      altTextCta: "open",
+    },
+    entityId:
+      "swiggy://collectionV2?collection_id=83647&tags=layout_CCS_Chinese",
     frequencyCapping: {},
   },
   {
@@ -95,23 +112,6 @@ export const whatsInYourMind = [
       altTextCta: "open",
     },
     entityId: "swiggy://collectionV2?collection_id=83656&tags=layout_CCS_Cake",
-    frequencyCapping: {},
-  },
-  {
-    id: "750588",
-    imageId: "v1674029848/PC_Creative%20refresh/3D_bau/banners_new/Chinese.png",
-    action: {
-      link: "https://www.swiggy.com/collections/83647?collection_id=83647&tags=layout_CCS_Chinese&type=rcv2",
-      text: "Chinese",
-      type: "WEBLINK",
-    },
-    entityType: "BANNER",
-    accessibility: {
-      altText: "restaurant curated for chinese",
-      altTextCta: "open",
-    },
-    entityId:
-      "swiggy://collectionV2?collection_id=83647&tags=layout_CCS_Chinese",
     frequencyCapping: {},
   },
   {
@@ -214,22 +214,6 @@ export const whatsInYourMind = [
     frequencyCapping: {},
   },
   {
-    id: "749774",
-    imageId: "v1674029855/PC_Creative%20refresh/3D_bau/banners_new/Noodles.png",
-    action: {
-      link: "https://www.swiggy.com/collections/80464?collection_id=80464&tags=layout_BAU_Contextual%2Cnoodles&type=rcv2",
-      text: "Noodles",
-      type: "WEBLINK",
-    },
-    entityType: "BANNER",
-    accessibility: {
-      altText: "restaurant curated for noodles",
-      altTextCta: "open",
-    },
-    entityId: "80464",
-    frequencyCapping: {},
-  },
-  {
     id: "750239",
     imageId: "v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Shakes.png",
     action: {
@@ -265,6 +249,39 @@ export const whatsInYourMind = [
     frequencyCapping: {},
   },
   {
+    id: "749774",
+    imageId: "v1674029855/PC_Creative%20refresh/3D_bau/banners_new/Noodles.png",
+    action: {
+      link: "https://www.swiggy.com/collections/80464?collection_id=80464&tags=layout_BAU_Contextual%2Cnoodles&type=rcv2",
+      text: "Noodles",
+      type: "WEBLINK",
+    },
+    entityType: "BANNER",
+    accessibility: {
+      altText: "restaurant curated for noodles",
+      altTextCta: "open",
+    },
+    entityId: "80464",
+    frequencyCapping: {},
+  },
+  {
+    id: "750644",
+    imageId: "v1674029846/PC_Creative%20refresh/3D_bau/banners_new/Idli.png",
+    action: {
+      link: "https://www.swiggy.com/collections/80441?collection_id=80441&searchContext=idli&tags=layout_CCS_Idli&type=rcv2",
+      text: "Idli",
+      type: "WEBLINK",
+    },
+    entityType: "BANNER",
+    accessibility: {
+      altText: "restaurants curated for idly",
+      altTextCta: "open",
+    },
+    entityId:
+      "swiggy://collectionV2?collection_id=80441&tags=layout_CCS_Idli&searchContext=idli",
+    frequencyCapping: {},
+  },
+  {
     id: "750207",
     imageId: "v1674029854/PC_Creative%20refresh/3D_bau/banners_new/Pasta.png",
     action: {
@@ -278,22 +295,6 @@ export const whatsInYourMind = [
       altTextCta: "open",
     },
     entityId: "80480",
-    frequencyCapping: {},
-  },
-  {
-    id: "750212",
-    imageId: "v1674029854/PC_Creative%20refresh/3D_bau/banners_new/Patty.png",
-    action: {
-      link: "https://www.swiggy.com/collections/80361?collection_id=80361&tags=layout_BAU_Contextual%2Cpatty&type=rcv2",
-      text: "Patty",
-      type: "WEBLINK",
-    },
-    entityType: "BANNER",
-    accessibility: {
-      altText: "restaurant curated for patty",
-      altTextCta: "open",
-    },
-    entityId: "80361",
     frequencyCapping: {},
   },
   {
@@ -313,19 +314,19 @@ export const whatsInYourMind = [
     frequencyCapping: {},
   },
   {
-    id: "749763",
-    imageId: "v1674029844/PC_Creative%20refresh/3D_bau/banners_new/Lassi.png",
+    id: "750253",
+    imageId: "rng/md/carousel/production/cbb85a3c1684891105294d11f8359996",
     action: {
-      link: "https://www.swiggy.com/collections/80459?collection_id=80459&tags=layout_BAU_Contextual%2Classi&type=rcv2",
-      text: "Lassi",
+      link: "https://www.swiggy.com/collections/80407?collection_id=80407&tags=layout_CCS_Tea&type=rcv2",
+      text: "Tea",
       type: "WEBLINK",
     },
     entityType: "BANNER",
     accessibility: {
-      altText: "restaurant curated for lassi",
+      altText: "restaurants curated for tea",
       altTextCta: "open",
     },
-    entityId: "80459",
+    entityId: "swiggy://collectionV2?collection_id=80407&tags=layout_CCS_Tea",
     frequencyCapping: {},
   },
 ];

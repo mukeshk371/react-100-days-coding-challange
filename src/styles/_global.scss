@@ -9,32 +9,5 @@ body {
 .body-content {
   @media (min-width: 961px) {
     margin: 0 calc(10% + 36px);
-    padding: 0 16px;
   }
-
-  h1 {
-    margin: 16px 0;
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: -0.4px;
-  }
-
-  .whats-in-your-mind {
-    padding: 16px 0;
-
-    >div {
-      overflow-x: auto;
-    }
-
-    .filter-anchor {
-      width: 144px;
-      margin-right: 24px;
-    }
-  }
-}
-
-.hr {
-  margin: 32px 0;
-  display: block;
-  border: 1px solid rgb(240, 240, 245);
 }
