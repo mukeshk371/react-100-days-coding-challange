@@ -4,16 +4,16 @@ import React from "react";
 export const RestaurantCard = ({ restaurant }) => {
   return (
     <div className="res-card px-[16px] md:px-0">
-      <div className="res-card-content h-full flex flex-row lg:flex-col">
+      <div className="res-card-content h-full flex flex-row md:flex-col">
         <img
           alt="res-img"
           width="100%"
           height="200px"
           src={CDN_URL + restaurant.info.cloudinaryImageId}
-          className="object-cover res-img w-[88px] h-[108px] lg:w-[100%] lg:h-[182px] rounded-[16px] drop-shadow-[0px_2px_8px_rgba(0,0,0,0.1)] z-10"
+          className="object-cover res-img w-[88px] h-[108px] md:w-[100%] md:h-[182px] rounded-[16px] drop-shadow-[0px_2px_8px_rgba(0,0,0,0.1)] z-10"
         />
-        <section className="truncate pl-[16px] lg:pl-0 text-[rgba(2,6,12,0.6)]">
-          <h3 className="truncate lg:mt-[12px] font-bold text-[18px] tracking-[-.3px] text-[rgba(2,6,12,0.75)]">{restaurant.info.name}</h3>
+        <section className="truncate pl-[16px] md:pl-0 text-[rgba(2,6,12,0.6)]">
+          <h3 className="truncate md:mt-[12px] font-bold text-[18px] tracking-[-.3px] text-[rgba(2,6,12,0.75)]">{restaurant.info.name}</h3>
           <h4 className="flex items-center font-bold text-[18px] tracking-[-.3px] text-[rgba(2,6,12,0.75)]">
             <svg
               width="20"

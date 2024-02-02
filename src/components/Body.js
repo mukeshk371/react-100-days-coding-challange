@@ -15,7 +15,7 @@ const RestaurantList = ({ restaurants }) => (
 const RestaurantFilter = ({ filters, onSelectFilter }) => (
   <>
     {filters.map((filter) => (
-      <button className="filter-anchor w-[80px] lg:w-[144px] mr-[12px] lg:mr-[24px]" key={filter.id} onClick={() => onSelectFilter(filter)}>
+      <button className="filter-anchor w-[80px] md:w-[144px] mr-[12px] lg:mr-[24px]" key={filter.id} onClick={() => onSelectFilter(filter)}>
         <img src={FILTER_LOGO_URL+filter.imageId} />
       </button>
     ))}
@@ -50,7 +50,7 @@ export const Body = () => {
         </div>
         <span className="hr my-[24px] lg:my-[32px] block border border-[rgb(240, 240, 245)]" />
         <h1 className="p-[16px] lg:px-0 text-[20px] lg:text-[24px] font-extrabold tracking-[-.4px]">Restaurants with online food delivery in Muzaffarpur</h1>
-        <div className="res-container grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="res-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px] md:px-[16px] lg:px-0">
           <RestaurantList restaurants={filteredRestaurants} />
         </div>
         <span className="hr my-[24px] lg:my-[32px] block border border-[rgb(240, 240, 245)]" />
