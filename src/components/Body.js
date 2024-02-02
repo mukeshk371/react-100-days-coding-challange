@@ -15,7 +15,7 @@ const RestaurantList = ({ restaurants }) => (
 const RestaurantFilter = ({ filters, onSelectFilter }) => (
   <>
     {filters.map((filter) => (
-      <button className="filter-anchor" key={filter.id} onClick={() => onSelectFilter(filter)}>
+      <button className="filter-anchor w-[80px] md:w-[144px] mr-[12px] lg:mr-[24px]" key={filter.id} onClick={() => onSelectFilter(filter)}>
         <img src={FILTER_LOGO_URL+filter.imageId} />
       </button>
     ))}
@@ -38,22 +38,22 @@ export const Body = () => {
 
   return (
     <div className="body">
-      <div className="body-content">
-        <div className="whats-in-your-mind">
-          <h1>MUKESH, what's on your mind?</h1>
-          <div className="whitespace-nowrap">
+      <div className="body-content lg:px-[16px]">
+        <div className="whats-in-your-mind lg:py-[16px]">
+          <h1 className="p-[16px] lg:px-0 text-[20px] lg:text-[24px] font-extrabold tracking-[-.4px]">MUKESH, what's on your mind?</h1>
+          <div className="whitespace-nowrap overflow-x-auto px-[16px] lg:px-0">
             <RestaurantFilter
               filters={whatsInYourMind}
               onSelectFilter={handleFilterChange}
             />
           </div>
         </div>
-        <span className="hr" />
-        <h1>Restaurants with online food delivery in Muzaffarpur</h1>
-        <div className="res-container grid grid-cols-1 md:grid-cols-4 gap-8">
+        <span className="hr my-[24px] lg:my-[32px] block border border-[rgb(240, 240, 245)]" />
+        <h1 className="p-[16px] lg:px-0 text-[20px] lg:text-[24px] font-extrabold tracking-[-.4px]">Restaurants with online food delivery in Muzaffarpur</h1>
+        <div className="res-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px] md:px-[16px] lg:px-0">
           <RestaurantList restaurants={filteredRestaurants} />
         </div>
-        <span className="hr" />
+        <span className="hr my-[24px] lg:my-[32px] block border border-[rgb(240, 240, 245)]" />
       </div>
     </div>
   );
