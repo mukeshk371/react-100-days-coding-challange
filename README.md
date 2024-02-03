@@ -117,3 +117,17 @@ import Component from "path";
 - **Named Export/Import** (Can be one or more than one)
 export const Component;
 import {Component} from "path";
+
+### JavaScript in JSX with Curly Braces
+-  **Passing strings with quotes**
+src="https://i.imgur.com/7vQD0fPs.jpg"
+alt="Gregorio Y. Zara"
+
+- **Using curly braces: A window into the JavaScript world**
+  const avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
+  const description = 'Gregorio Y. Zara';
+  src={avatar}
+  alt={description}
+
+## Understanding UI as a Tree
+![Alt Text](https://react.dev/_next/image?url=%2Fimages%2Fdocs%2Fdiagrams%2Fpreserving_state_dom_tree.png&w=1080&q=75)
