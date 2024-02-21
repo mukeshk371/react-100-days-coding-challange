@@ -49,7 +49,7 @@ export const Header = () => {
                   height="20"
                   width="20"
                   fill="#fff"
-                  stroke-width="2px"
+                  strokeWidth="2px"
                   stroke="#282c3f"
                 >
                   <path d="M4.438 0l-2.598 5.11-1.84 26.124h34.909l-1.906-26.124-2.597-5.11z"></path>
@@ -69,11 +69,11 @@ export const Header = () => {
             width="16"
             height="16"
             fill="currentColor"
-            class="bi bi-list"
+            className="bi bi-list"
             viewBox="0 0 16 16"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
             />
           </svg>
