@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { RestaurantCard } from "./RestaurantCard";
-import { resList } from "../utils/mockData";
 import { whatsInYourMind } from "../utils/whatsInYourMind";
 import { FILTER_LOGO_URL } from "../utils/constants";
 
@@ -29,6 +28,9 @@ const RestaurantFilter = ({ filters, onSelectFilter }) => (
 export const Body = () => {
   const [filteredCuisine, setFilteredCuisine] = useState("All");
   const [swiggyData, setSwiggyData] = useState([]);
+  const [restaurantHeading, setRestaurantHeading] = useState(
+    "Restaurants with online food delivery"
+  );
 
   const handleFilterChange = (filter) => {
     setFilteredCuisine(filter.action.text);
@@ -36,10 +38,10 @@ export const Body = () => {
 
   const filteredRestaurants =
     filteredCuisine === "All"
-      ? resList
-      : resList.filter((restaurant) =>
-          restaurant.info.cuisines.includes(filteredCuisine)
-        );
+      ? swiggyData
+      : swiggyData.filter((restaurant) =>
+        restaurant.info.cuisines.includes(filteredCuisine)
+      );
 
   useEffect(() => {
     fetchData();
@@ -48,14 +50,19 @@ export const Body = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.106926&lng=85.357232&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }
-      const data = await response.json();
-      setSwiggyData(data);
-      console.log(data)
+      const jsonData = await response.json();
+      console.log(jsonData);
+      const restaurantList =
+        jsonData.data.cards[2].card.card.gridElements.infoWithStyle.restaurants;
+      setSwiggyData(restaurantList);
+      setRestaurantHeading(
+        jsonData.data.cards[0].card.card.title
+      );
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -77,7 +84,7 @@ export const Body = () => {
         </div>
         <span className="hr my-[24px] lg:my-[32px] block border border-[rgb(240, 240, 245)]" />
         <h1 className="p-[16px] lg:px-0 text-[20px] lg:text-[24px] font-extrabold tracking-[-.4px]">
-          Restaurants with online food delivery in Muzaffarpur
+          {restaurantHeading}
         </h1>
         <div className="res-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px] md:px-[16px] lg:px-0">
           <RestaurantList restaurants={filteredRestaurants} />
