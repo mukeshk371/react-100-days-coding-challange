@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { RestaurantCard } from "./RestaurantCard";
 import { whatsInYourMind } from "../utils/whatsInYourMind";
 import { FILTER_LOGO_URL } from "../utils/constants";
+import Shimmer from "./Shimmer";
 
 const RestaurantList = ({ restaurants }) => (
   <>
@@ -40,8 +41,8 @@ export const Body = () => {
     filteredCuisine === "All"
       ? swiggyData
       : swiggyData.filter((restaurant) =>
-        restaurant.info.cuisines.includes(filteredCuisine)
-      );
+          restaurant.info.cuisines.includes(filteredCuisine)
+        );
 
   useEffect(() => {
     fetchData();
@@ -50,7 +51,7 @@ export const Body = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.106926&lng=85.357232&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.59051311404269&lng=73.78173284232614&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       if (!response.ok) {
         throw new Error("Failed to fetch data");
@@ -60,13 +61,15 @@ export const Body = () => {
       const restaurantList =
         jsonData.data.cards[2].card.card.gridElements.infoWithStyle.restaurants;
       setSwiggyData(restaurantList);
-      setRestaurantHeading(
-        jsonData.data.cards[0].card.card.title
-      );
+      setRestaurantHeading(jsonData.data.cards[0].card.card.title);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
+
+  if (swiggyData == 0) {
+    return <Shimmer />;
+  }
 
   return (
     <div className="body">
