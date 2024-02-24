@@ -32,16 +32,24 @@ export const Body = () => {
   const [restaurantHeading, setRestaurantHeading] = useState(
     "Restaurants with online food delivery"
   );
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleFilterChange = (filter) => {
     setFilteredCuisine(filter.action.text);
   };
 
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
   const filteredRestaurants =
     filteredCuisine === "All"
-      ? swiggyData
+      ? swiggyData.filter((restaurant) =>
+          restaurant.info.name.toLowerCase().includes(searchQuery.toLowerCase())
+        )
       : swiggyData.filter((restaurant) =>
-          restaurant.info.cuisines.includes(filteredCuisine)
+          restaurant.info.cuisines.includes(filteredCuisine) &&
+          restaurant.info.name.toLowerCase().includes(searchQuery.toLowerCase())
         );
 
   useEffect(() => {
@@ -67,13 +75,18 @@ export const Body = () => {
     }
   };
 
-  if (swiggyData == 0) {
-    return <Shimmer />;
-  }
-
-  return (
+  return swiggyData.length == 0 ? <Shimmer /> : (
     <div className="body">
       <div className="body-content lg:px-[16px]">
+        <div className="search-box">
+          <input
+            type="text"
+            className="search-input border-[rgba(40,44,63,.2)] border-[1px] rounded-[4px] h-[48] w-full"
+            placeholder="Search for restaurants and food"
+            value={searchQuery}
+            onChange={handleSearchChange}
+          />
+        </div>
         <div className="whats-in-your-mind lg:py-[16px]">
           <h1 className="p-[16px] lg:px-0 text-[20px] lg:text-[24px] font-extrabold tracking-[-.4px]">
             MUKESH, what's on your mind?
