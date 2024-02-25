@@ -30,7 +30,7 @@ export const Header = () => {
 
   return (
     <HeaderStyles>
-      <header className="header flex items-center justify-between sticky top-0 h-[60px] lg:h-[80px] px-[16px] lg:px-[20px]">
+      <header className="header flex items-center justify-between fixed w-full top-0 h-[60px] lg:h-[80px] px-[16px] lg:px-[20px]">
         <div className="logo-container">
           <img className="logo w-[60px] lg:w-20" src={LOGO_URL} alt="Logo" />
         </div>
@@ -114,7 +114,7 @@ export const Header = () => {
       {!isLoggedIn && showLoginPopup && (
         <div className="login-popup fixed h-full w-full bg-[rgba(0,0,0,0.6)] top-0 left-0 z-[999]">
           <div className="login-form mx-auto bg-white w-[50%] relative rounded-[10px] mt-[150px]">
-            <form onSubmit={handleLogin} className="flex flex-col justify-center items-center p-[20px]">
+            <form onSubmit={handleLogin} className="flex flex-col justify-center items-center p-[30px]">
               <label className="flex justify-center items-center w-[70%] mb-[20px]">
                 <strong className="font-semibold text-[20px] mr-[20px]">Username:</strong>
                 <input type="text" name="username" required className="search-input border-[rgba(40,44,63,.2)] border-[1px] rounded-[4px] h-[48] w-full px-[16px]" />
@@ -126,7 +126,7 @@ export const Header = () => {
               <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button>
             </form>
             <button className="absolute right-[15px] top-[15px] text-[red]" onClick={() => setShowLoginPopup(false)}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
                 <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
               </svg>
             </button>
