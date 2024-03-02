@@ -1,18 +1,49 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Header } from "./components/Header";
 import { Body } from "./components/Body";
 import "./styles/_imports.scss";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import Offers from "./components/Offers/Offers";
+import Help from "./components/Help/Help";
+import NotFound from "./components/NotFound/NotFound";
+import { Header } from "./components/Header/Header";
+import RestaurantMenu from "./components/RestaurantMenu/RestaurantMenu";
 
 const AppLayout = () => {
   return (
-    <div className="app">
+    <div className="app pt-[80px]">
       <Header />
-      <Body />
+      <Outlet />
     </div>
   );
 };
 
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Body />
+      },
+      {
+        path: "/offers",
+        element: <Offers />
+      },
+      {
+        path: "/help",
+        element: <Help />
+      },
+      {
+        path: "/restaurant/:resId",
+        element: <RestaurantMenu />
+      }
+    ],
+    errorElement: <NotFound />
+  },
+]);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<AppLayout />);
+root.render(<RouterProvider router={appRouter} />);

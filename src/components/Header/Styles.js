@@ -6,7 +6,7 @@ export const HeaderStyles = styled.div`
     z-index: 999;
     box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
 
-    > div {
+    > div,.logo-container {
       @media (min-width: 1200px) {
         width: 1200px;
       }
