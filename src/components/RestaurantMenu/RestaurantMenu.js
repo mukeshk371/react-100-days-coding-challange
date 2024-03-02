@@ -16,9 +16,6 @@ const RestaurantMenu = () => {
     setRestaurantInfo(jsonData.data);
   };
 
-  const { resName } = restaurantInfo.cards;
-  console.log(resName)
-
   return restaurantInfo == null ? (
     <Shimmer />
   ) : (
