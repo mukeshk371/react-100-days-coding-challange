@@ -68,7 +68,7 @@ export const Body = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.59051311404269&lng=73.78173284232614&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.106926&lng=85.357232&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       if (!response.ok) {
         throw new Error("Failed to fetch data");
