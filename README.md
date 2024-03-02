@@ -131,3 +131,26 @@ alt="Gregorio Y. Zara"
 
 ## Understanding UI as a Tree
 ![Alt Text](https://react.dev/_next/image?url=%2Fimages%2Fdocs%2Fdiagrams%2Fpreserving_state_dom_tree.png&w=1080&q=75)
+
+## [React Router DOM](https://reactrouter.com/en/main)
+**React Router DOM** is a popular routing library for React applications that allows you to create single-page applications with multiple views. It provides a way to manage the application's UI state and URL, enabling you to navigate between different parts of your application without reloading the page. React Router DOM uses a declarative approach to define routes using components, making it easy to create complex routing structures.
+
+1.  **Declarative Routing:** Define routes using React components, making it easy to understand and manage routing logic.
+    
+2.  **Nested Routes:** Support for nested routes, allowing you to create complex UI structures with multiple levels of routing.
+    
+3.  **Route Matching:** Flexible route matching options, including exact matches, partial matches, and parameterized routes.
+    
+4.  **Navigation:** Programmatically navigate between routes using the `Link` component or the `useNavigate` hook.
+    
+5.  **Route Parameters:** Easily extract and use parameters from the URL in your components using the `useParams` hook.
+    
+6.  **Redirects:** Redirect users to a different route based on certain conditions using the `Redirect` component.
+    
+7.  **History Management:** Access and manipulate the browser's history stack using the `useHistory` hook.
+    
+8.  **Code Splitting:** Support for code splitting, allowing you to load only the necessary components for each route, improving performance.
+    
+9.  **Location State:** Store and access additional state information for each route using the location object.
+    
+10.  **Server-side Rendering (SSR):** Support for server-side rendering, enabling you to render your application on the server and send the fully rendered HTML to the client for improved performance and SEO.

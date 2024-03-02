@@ -90,7 +90,7 @@ export const Body = () => {
   ) : (
     <div className="body">
       <div className="body-content lg:px-[16px]">
-        <div className="search-box relative">
+        <div className="search-box relative mt-[30px]">
           <input
             type="text"
             className="search-input border-[rgba(40,44,63,.2)] border-[1px] rounded-[4px] h-[48] w-full px-[16px]"
@@ -128,6 +128,7 @@ export const Body = () => {
             <div
               className="facet-div px-[12px] py-[8px] border-[rgb(54, 57, 62)] border-[1px] rounded-[500px] mr-[10px]"
               onClick={handleShowCloseBtn}
+              key={face.id}
             >
               <span>{face.label}</span>
               {showCloseBtn && <span>X</span>}
